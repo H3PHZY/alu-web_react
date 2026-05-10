@@ -1,6 +1,5 @@
 node_modules/
 build/
-dist/
 *.js.map
 .DS_Store
 build_output.txt
