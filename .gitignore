@@ -1,5 +1,4 @@
 **/dist/main.js
-**/dist/*.js.map
-**/dist/*.LICENSE.txt
+
 node_modules/
 
