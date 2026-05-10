@@ -10,12 +10,15 @@ module.exports = {
     footer: './modules/footer/footer.js',
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, './public'),
     filename: '[name].bundle.js',
   },
   devServer: {
+    static: {
+      directory: path.resolve(__dirname, './public'),
+    },
+    contentBase: './public',
     port: 8564,
-    static: path.resolve(__dirname, 'public'),
     open: true,
     hot: true,
   },
