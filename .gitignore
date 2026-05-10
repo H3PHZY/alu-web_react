@@ -1,7 +1,8 @@
 node_modules/
-dist/
 build/
+dist/
 *.js.map
 .DS_Store
 build_output.txt
 build_log.txt
+bundle.js
