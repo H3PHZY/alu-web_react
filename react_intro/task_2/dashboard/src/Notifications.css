@@ -2,3 +2,11 @@
   border: 1px solid #e0354b;
   padding: 20px;
 }
+
+[data-priority="default"] {
+  color: blue;
+}
+
+[data-priority="urgent"] {
+  color: red;
+}
