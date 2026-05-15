@@ -1,0 +1,2 @@
+.App{display:flex;flex-direction:column;min-height:100vh}.App-header{align-items:center;background-color:#fff;border-bottom:3px solid #e0354b;display:flex;padding:20px}.App-header img{height:auto;width:200px}.App-header h1{color:#e0354b;font-size:2rem;margin-left:20px}.App-body{flex:1 1;font-size:1.2rem;padding:40px}.App-footer{border-top:3px solid #e0354b;font-style:italic;padding:20px;text-align:center}.Notifications{border:1px solid #e0354b;padding:20px}[data-priority=default]{color:blue}[data-priority=urgent]{color:red}
+/*# sourceMappingURL=main.f70f3e33.css.map*/
