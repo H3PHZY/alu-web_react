@@ -4,42 +4,54 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
+    path: path.resolve(__dirname, '../dist'),
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: path.resolve(__dirname, '../dist'),
-    hot: true,
+    static: {
+      directory: path.resolve(__dirname, '../dist'),
+    },
+    compress: true,
     port: 8564,
-    open: true,
+    hot: true,
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
-      },
-      {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           'file-loader',
           {
             loader: 'image-webpack-loader',
             options: {
-              disable: true,
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              // the webp option will enable WEBP
+              webp: {
+                quality: 75,
+              },
             },
           },
         ],
       },
     ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
   },
 };

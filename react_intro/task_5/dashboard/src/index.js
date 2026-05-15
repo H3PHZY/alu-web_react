@@ -1,5 +1,8 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+import $ from 'jquery';
+import './style.css';
+import logo from './logo.png';
 
-const root = createRoot(document.getElementById('root'));
-root.render(<h1>Dashboard</h1>);
+$('body').append(`<img src="${logo}" width="200" height="200">`);
+$('body').append('<p>Holberton Dashboard</p>');
+$('body').append('<p>Dashboard data for the stats</p>');
+$('body').append('<p>Copyright - Holberton School</p>');
