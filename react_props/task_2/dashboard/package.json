@@ -1,0 +1,38 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --config config/webpack.config.js",
+    "build": "webpack --config config/webpack.config.js",
+    "test": "react-scripts test",
+    "test-watch": "jest --watch"
+  },
+  "dependencies": {
+    "jquery": "^4.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.5",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^10.1.1",
+    "cheerio": "^1.0.0-rc.12",
+    "css-loader": "^7.1.4",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.8",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "react-scripts": "^5.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.4"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
