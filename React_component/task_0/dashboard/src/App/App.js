@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import Notifications from '../Notifications/Notifications';
@@ -19,7 +19,7 @@ const listNotifications = [
   { id: 3, type: 'urgent', html: { __html: '<strong>Urgent requirement</strong> - complete by EOD' } },
 ];
 
-class App extends Component {
+class App extends React.Component {
   render() {
     const { isLoggedIn } = this.props;
     return (
