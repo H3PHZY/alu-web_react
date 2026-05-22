@@ -1,24 +1,26 @@
-import { shallow } from 'enzyme';
 import React from 'react';
+import { shallow } from 'enzyme';
 import CourseListRow from './CourseListRow';
 
-describe('CourseListRow when isHeader is true', () => {
-  test('renders one cell with colspan = 2 when textSecondCell does not exist', () => {
-    const wrapper = shallow(<CourseListRow isHeader={true} textFirstCell="Available courses" />);
-    expect(wrapper.find('th').length).toBe(1);
-    expect(wrapper.find('th').prop('colSpan')).toBe(2);
-  });
+describe('<CourseListRow />', () => {
+    it('renders an <CourseListRow /> component', () => {
+        const wrapper = shallow(<CourseListRow />);
+        expect(wrapper).toHaveLength(1);
+    });
 
-  test('renders two cells when textSecondCell is present', () => {
-    const wrapper = shallow(<CourseListRow isHeader={true} textFirstCell="Course name" textSecondCell="Credit" />);
-    expect(wrapper.find('th').length).toBe(2);
-  });
-});
+	it('renders a <CourseListRow /> component with isHeader set to true and textSecondCell === null', () => {
+        const wrapper = shallow(<CourseListRow isHeader={true} />);
+        expect(wrapper.find('th')).toHaveLength(1);
+        expect(wrapper.find('th').get(0).props.colSpan).toEqual(2);
+    });
 
-describe('CourseListRow when isHeader is false', () => {
-  test('renders correctly two td elements within a tr element', () => {
-    const wrapper = shallow(<CourseListRow textFirstCell="ES6" textSecondCell="60" />);
-    expect(wrapper.find('tr').length).toBe(1);
-    expect(wrapper.find('td').length).toBe(2);
-  });
+    it('tests the component renders two cells when textSecondCell is present', () => {
+        const wrapper = shallow(<CourseListRow isHeader={true} textSecondCell="Holberton Second"/>);
+        expect(wrapper.find('th')).toHaveLength(2);
+    });
+
+    it('tests the component renders correctly two td elements within a tr element when isHeader is false', () => {
+        const wrapper = shallow(<CourseListRow isHeader={false} />);
+        expect(wrapper.find('tr td')).toHaveLength(2);
+    })
 });
