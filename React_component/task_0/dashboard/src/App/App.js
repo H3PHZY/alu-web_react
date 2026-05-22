@@ -27,9 +27,9 @@ class App extends Component {
         <Notifications listNotifications={listNotifications} />
         <div className="App">
           <Header />
-          <body className="App-body">
+          <div className="App-body">
             {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
-          </body>
+          </div>
           <Footer />
         </div>
       </>
