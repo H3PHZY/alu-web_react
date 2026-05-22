@@ -12,9 +12,9 @@ class App extends Component {
         <Notifications />
         <div className="App">
           <Header />
-          <body className="App-body">
+          <div className="App-body">
             <Login />
-          </body>
+          </div>
           <Footer />
         </div>
       </>
