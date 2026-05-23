@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
 import NotificationItem from "./NotificationItem";
 import { render, screen } from "@testing-library/react";

@@ -1,4 +1,9 @@
-import { getLatestNotifications } from "../utils/utils";
+/**
+ * @jest-environment jsdom
+ */
+
+import React from "react";
+import { getLatestNotification } from "../utils/utils";
 import Notifications from "./Notifications";
 import { render, screen } from "@testing-library/react";
 import { StyleSheetTestUtils } from "aphrodite";
@@ -14,7 +19,7 @@ describe("Notifications tests", () => {
     const listNotifications = [
       { id: 1, type: "default", value: "New course available" },
       { id: 2, type: "urgent", value: "New resume available" },
-      { id: 3, type: "urgent", html: getLatestNotifications() },
+      { id: 3, type: "urgent", html: getLatestNotification() },
     ];
     render(<Notifications listNotifications={listNotifications} />);
     expect(screen.getAllByRole("listitem")).toHaveLength(3);
