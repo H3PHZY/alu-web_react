@@ -37,6 +37,16 @@ const styles = StyleSheet.create({
         margin: '0 5vw',
         border: '1px solid grey',
     },
+    table: {
+        width: '90vw',
+        margin: '0 5vw',
+        border: '1px solid grey',
+    },
+    courseList: {
+        width: '90vw',
+        margin: '0 5vw',
+        border: '1px solid grey',
+    }
 });
 
 // propType listcourses takes an array of the courseShape

@@ -68,7 +68,15 @@ class Notifications extends React.Component {
 
 const styles = StyleSheet.create({
     notifications: {
-        border: '2px dashed #FF0000',
+        border: '2px dashed #e0354b',
+        padding: '24px',
+    },
+    notificationsPanel: {
+        border: '2px dashed #e0354b',
+        padding: '24px',
+    },
+    panel: {
+        border: '2px dashed #e0354b',
         padding: '24px',
     }
 });
