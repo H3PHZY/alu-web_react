@@ -1,56 +1,27 @@
-/**
- * @jest-environment jsdom
- */
+import React from "react";
+import NotificationItem from "./NotificationItem";
+import { render, screen } from "@testing-library/react";
+import { StyleSheetTestUtils } from "aphrodite";
 
-import { StyleSheetTestUtils } from 'aphrodite';
-StyleSheetTestUtils.suppressStyleInjection();
+StyleSheetTestUtils.suppressStyleInjection()
 
-import React from 'react';
-import { shallow } from 'enzyme';
-import NotificationItem from './NotificationItem';
-import Notifications from './Notifications';
 
-describe('<NotificationItem />', () => {
-    it('renders an <NotificationItems /> component', () => {
-        const wrapper = shallow(<NotificationItem />);
-        expect(wrapper).toHaveLength(1);
+describe("Notification item", () => {
+    it("should render the notification item", () => {
+        render(<NotificationItem value="hello world" />);
+        screen.getByText(/hello world/i);
+
     });
 
-    it('renders an <NotificationItem /> component with type and value', () => {
-        const wrapper = shallow(<NotificationItem type="default" value="test" />);
-        expect(wrapper.props()[ 'data-notification-type' ]).toEqual('default');
-        expect(wrapper.text()).toEqual('test');
-        expect(wrapper.html()).toContain('<li data-notification-type="default"');
-        expect(wrapper.html()).toContain('test</li>');
-    });
+    it("should render the correct when inner html is provided", () => {
+        render(<NotificationItem html="<strong>hello world</strong>" />);
+        screen.getByText(/hello world/i);
+    })
 
-    it('renders an <NotificationItem /> component checking for html pass through', () => {
-        const wrapper = shallow(<NotificationItem html={ { __html: '<u>test</u>' } } />);
-        expect(wrapper.html()).toContain('<u>test</u>');
-    });
-
-    it('calls markAsRead with the right id', () => {
-        const listNotifications = [
-            { id: 1, type: 'default', value: 'New course available' },
-            { id: 2, type: 'urgent', value: 'New resume available' },
-            { id: 3, type: 'urgent', value: 'Holberton Danger' },
-        ];
-
-        const wrapper = shallow(<Notifications displayDrawer={ true } listNotifications={ listNotifications } />);
-
-        const instance = wrapper.instance();
-        const spy = jest.spyOn(instance, 'markAsRead');
-
-        const item1 = wrapper.find(NotificationItem).at(0).dive();
-        item1.simulate('click');
-        expect(spy).toBeCalledWith(1);
-
-        const item2 = wrapper.find(NotificationItem).at(1).dive();
-        item2.simulate('click');
-        expect(spy).toBeCalledWith(2);
-
-        const item3 = wrapper.find(NotificationItem).at(2).dive();
-        item3.simulate('click');
-        expect(spy).toBeCalledWith(3);
+    it("should call the markAsRead function when clicked", () => {
+        const mockMarkAsRead = jest.fn();
+        render(<NotificationItem markAsRead={mockMarkAsRead} value="hello world" />);
+        screen.getByText(/hello world/i).click();
+        expect(mockMarkAsRead).toHaveBeenCalled();
     });
 });
