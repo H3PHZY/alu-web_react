@@ -1,0 +1,97 @@
+[
+  {
+    "id": "5debd76480edafc8ae844d20",
+    "author": {
+      "id": "5debd764a7c57c7839d722e9",
+      "name": {
+        "first": "Poole",
+        "last": "Sanders"
+      },
+      "picture": "http://placehold.it/32x32",
+      "age": 25,
+      "email": "poole.sanders@holberton.nz"
+    },
+    "context": {
+      "guid": "2d8e40be-1c78-4de0-afc9-fcc147afd4d2",
+      "isRead": true,
+      "type": "urgent",
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+    }
+  },
+  {
+    "id": "5debd764507748e7831ee817",
+    "author": {
+      "id": "5debd764a7c57c7839d722e9",
+      "name": {
+        "first": "Poole",
+        "last": "Sanders"
+      },
+      "picture": "http://placehold.it/32x32",
+      "age": 25,
+      "email": "poole.sanders@holberton.nz"
+    },
+    "context": {
+      "guid": "280913fe-38dd-4abd-8ab6-acdb4105f922",
+      "isRead": false,
+      "type": "urgent",
+      "value": "Non diam phasellus vestibulum lorem sed risus ultricies. Tellus mauris a diam maecenas sed"
+    }
+  },
+  {
+    "id": "5debd7648ba8641ce0a34ea9",
+    "author": {
+      "id": "5debd764f8452ef92346c772",
+      "name": {
+        "first": "Lucile",
+        "last": "Roy"
+      },
+      "picture": "http://placehold.it/32x32",
+      "age": 29,
+      "email": "lucile.roy@holberton.nz"
+    },
+    "context": {
+      "guid": "eed6e547-e082-4d0e-b245-df4d78b74987",
+      "isRead": false,
+      "type": "default",
+      "value": "Ut venenatis tincidunt arcu non sodales. Nisi est sit amet facilisis."
+    }
+  },
+  {
+    "id": "5debd764b14dcc7126999aab",
+    "author": {
+      "id": "5debd764f8452ef92346c772",
+      "name": {
+        "first": "Lucile",
+        "last": "Roy"
+      },
+      "picture": "http://placehold.it/32x32",
+      "age": 29,
+      "email": "lucile.roy@holberton.nz"
+    },
+    "context": {
+      "guid": "d889df9d-5f29-4e09-be69-7d1c5e2e1c83",
+      "isRead": false,
+      "type": "urgent",
+      "value": "Magna etiam tempor orci eu. Duis ultricies lacus sed turpis tincidunt."
+    }
+  },
+  {
+    "id": "5debd76417d14fec2f243cd1",
+    "author": {
+      "id": "5debd764176455d191b67f8a",
+      "name": {
+        "first": "Guillaume",
+        "last": "Salva"
+      },
+      "picture": "http://placehold.it/32x32",
+      "age": 30,
+      "email": "guillaume.salva@holberton.nz"
+    },
+    "context": {
+      "guid": "6e1035ad-a5d0-4b74-89da-36100e2b4a7b",
+      "isRead": false,
+      "type": "default",
+      "value": "Id aliquet risus feugiat in ante metus dictum at. Feugiat pretium nibh ipsum consequat."
+    }
+  }
+]
